@@ -4,9 +4,9 @@
 
 Naveen Aravapalli · Python · PyTorch
 
-[Results](task1_llm/naveen/results.md) · [Metrics](task1_llm/naveen/metrics_report.csv) · [Failure analysis](task1_llm/naveen/failure_analysis.md) · [Reproduction guide](REPRODUCIBILITY.md)
+[Results](reports/results.md) · [Metrics](reports/metrics.csv) · [Failure analysis](reports/failure_analysis.md) · [Setup](SETUP.md)
 
-Results below come from the saved experiment metrics. See [reproducibility notes](REPRODUCIBILITY.md) for environment setup and current rerun limitations.
+See [setup notes](SETUP.md) for dependencies, data requirements, and current reproducibility limitations.
 
 ## Overview and results
 
@@ -26,42 +26,22 @@ Character-level perplexity should be compared only under matching tokenization a
 
 ## Code and analysis
 
-- [Notebook](task1_llm/naveen/src/Task1_LLM_Naveen.ipynb)
+- [Notebook](notebooks/train_tinygpt.ipynb)
 - [Result visualization](https://github.com/aravapallinaveen/DATA266-Lab1-Pair25/blob/f2c44af85977ada3fc36cc70949f266a58726881/task1_llm/naveen/outputs/train_val_loss_curve.png)
-- [Source history and attribution](PROVENANCE.md)
-- [Recorded metrics](task1_llm/naveen/metrics_report.csv) and [detailed results](task1_llm/naveen/results.md)
+- [Recorded metrics](reports/metrics.csv) and [detailed results](reports/results.md)
 
 ## Repository layout
 
 ```text
-README.md
-REPRODUCIBILITY.md
-PROVENANCE.md
-requirements.in                 # dependency candidates, not a tested lock
-reproducibility/
-  artifact_checksums.json       # hashes of this portfolio snapshot
-  run_manifest.template.json    # template for a future verified rerun
-scripts/verify_evidence.py      # integrity check; does not train a model
-task1_llm/naveen/
-  src/                         # original notebook / implementation
-  outputs/                     # selected small recorded tables
-  metrics_report.csv
-  results.md
-  failure_analysis.md
+notebooks/          # training and evaluation notebooks
+reports/            # metrics, results, and failure analysis
+outputs/            # generated samples and evaluation tables
 ```
 
-The implementation retains its original directory structure. Datasets and large model artifacts are not bundled; see the reproduction guide for availability and setup details.
+The code is organized into notebooks, experiment reports, and supporting artifacts. Datasets and large model artifacts are not bundled; see the reproduction guide for availability and setup details.
 
-## Verify local files
 
-From this repository's root, with Python available:
 
-```powershell
-python scripts/verify_evidence.py
-```
+## Hardware
 
-This checks file integrity against the saved SHA-256 hashes. It does not run the model or recompute evaluation metrics. Follow [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for remaining setup and run requirements.
-
-## Author and source history
-
-Implemented by Naveen Aravapalli. [PROVENANCE.md](PROVENANCE.md) records the original source, attribution, and changes made when organizing this repository.
+The saved results were recorded on an NVIDIA GeForce RTX 5090.
