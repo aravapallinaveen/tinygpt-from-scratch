@@ -2,17 +2,17 @@
 
 **Character-level language modeling with manually implemented causal attention.**
 
-Naveen Aravapalli · DATA266 · PyTorch
+Naveen Aravapalli · Python · PyTorch
 
-[Results](task1_llm/naveen/results.md) · [Metrics](task1_llm/naveen/metrics_report.csv) · [Failure analysis](task1_llm/naveen/failure_analysis.md) · [Reproduction guide](REPRODUCIBILITY.md) · [Team repository](https://github.com/aravapallinaveen/DATA266-Lab1-Pair25)
+[Results](task1_llm/naveen/results.md) · [Metrics](task1_llm/naveen/metrics_report.csv) · [Failure analysis](task1_llm/naveen/failure_analysis.md) · [Reproduction guide](REPRODUCIBILITY.md)
 
-> Portfolio package assembled from Naveen's work at commit `f2c44af85977`. Metrics below are transcribed from saved artifacts, not independently rerun. This repository supplements the shared team submission.
+Results below come from the saved experiment metrics. See [reproducibility notes](REPRODUCIBILITY.md) for environment setup and current rerun limitations.
 
-## Project and recorded results
+## Overview and results
 
 A decoder-only PyTorch model trained on TinyStories using a character vocabulary of 110, a 256-character context, four Transformer blocks, eight attention heads, and 256-dimensional embeddings. The recorded run used 100,000 training stories and 10,000 validation stories, seed 171, and 10 epochs on an RTX 5090.
 
-The notebook contains the attention and model implementation; no prebuilt Transformer or attention module is claimed by the original results. Architecture rationale and failure analysis are preserved as the author's original work.
+Causal self-attention is implemented directly with query, key, and value projections, scaled dot products, and a lower-triangular mask. The notebook also implements the Transformer blocks, language-model head, and autoregressive generation.
 
 | Recorded validation metric | Value |
 |---|---:|
@@ -20,16 +20,16 @@ The notebook contains the attention and model implementation; no prebuilt Transf
 | Character-level perplexity | 1.87478 |
 | Bits per character | 0.90672 |
 | Next-character accuracy | 79.98% |
-| Trainable/model parameters | 3,278,336 |
+| Parameters | 3,278,336 |
 
 Character-level perplexity should be compared only under matching tokenization and evaluation protocols. Training duration and throughput in the original report are hardware-specific measurements.
 
-## Explore the evidence
+## Code and analysis
 
-- [Included notebook](task1_llm/naveen/src/Task1_LLM_Naveen.ipynb)
-- [Original result visualization](https://github.com/aravapallinaveen/DATA266-Lab1-Pair25/blob/f2c44af85977ada3fc36cc70949f266a58726881/task1_llm/naveen/outputs/train_val_loss_curve.png)
-- [Source and ownership record](PROVENANCE.md)
-- [Recorded metrics](task1_llm/naveen/metrics_report.csv) and [original interpretation](task1_llm/naveen/results.md)
+- [Notebook](task1_llm/naveen/src/Task1_LLM_Naveen.ipynb)
+- [Result visualization](https://github.com/aravapallinaveen/DATA266-Lab1-Pair25/blob/f2c44af85977ada3fc36cc70949f266a58726881/task1_llm/naveen/outputs/train_val_loss_curve.png)
+- [Source history and attribution](PROVENANCE.md)
+- [Recorded metrics](task1_llm/naveen/metrics_report.csv) and [detailed results](task1_llm/naveen/results.md)
 
 ## Repository layout
 
@@ -50,9 +50,9 @@ task1_llm/naveen/
   failure_analysis.md
 ```
 
-Original task/member paths are retained so provenance and relative references remain recognizable. Large artifacts and datasets are not bundled; some original documents reference files available only upstream or in the submission package.
+The implementation retains its original directory structure. Datasets and large model artifacts are not bundled; see the reproduction guide for availability and setup details.
 
-## Quick inspection
+## Verify local files
 
 From this repository's root, with Python available:
 
@@ -60,12 +60,8 @@ From this repository's root, with Python available:
 python scripts/verify_evidence.py
 ```
 
-This checks the packaged evidence against local SHA-256 records. It does **not** reproduce training or validate metric correctness. Follow [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for remaining setup and run requirements.
+This checks file integrity against the saved SHA-256 hashes. It does not run the model or recompute evaluation metrics. Follow [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for remaining setup and run requirements.
 
-## Ownership and academic context
+## Author and source history
 
-This showcase contains Naveen's task folder, with attribution to the shared Pair 25 repository. Praveen's models and team-level leaderboard outcomes are not represented as Naveen's independent achievements. The assignment's shared team repository, individual training, and combined report requirements remain separate.
-
-The original architecture choices, results, and analysis remain attributable to their author. AI assistance in this packaging pass covered documentation, organization, and evidence inspection; it did not conduct training or the human audit. Review all wording and disclose assistance as required by the course.
-
-No new license is granted by this package. Confirm rights to publish course-derived material, data excerpts, and any reused code before adding a license or releasing the showcase publicly.
+Implemented by Naveen Aravapalli. [PROVENANCE.md](PROVENANCE.md) records the original source, attribution, and changes made when organizing this repository.
