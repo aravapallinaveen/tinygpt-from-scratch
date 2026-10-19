@@ -1,0 +1,12 @@
+{
+  "reproducibility/manifests/environment.yml": "0e52187f2a12fcd1d9134568e01c1e654bf49752896918044574a9997bde78f4",
+  "reproducibility/manifests/requirements.txt": "8ea7e8b8e0841964c8d3c37fee3d1280c5291fed6be7f962bfd824ee49cc68f8",
+  "reproducibility/manifests/task1_naveen_manifest.txt": "ab34e2dc4f2ff5d9e895fc3794f98a0aec9ae153d85b69a25d61572b59be01a6",
+  "reproducibility/raw_logs/task1_llm_naveen_training_raw.txt": "56bd5fec27e063a1002d5a036a145fd0dde7e4598844d00b397e6574732d8c0e",
+  "task1_llm/naveen/failure_analysis.md": "effaf245f75b80847cc25fd85ebd10253e49621ceccdea45900cea4d321bd178",
+  "task1_llm/naveen/metrics_report.csv": "09c75ca251fd5633e1ff7d9de1f9cca9b8fa5dc93d2eba0af2687950f161029b",
+  "task1_llm/naveen/results.md": "322f8370e21f7221dcc77e0241fd5161852ef16338d864b29e3606d0ec236d3d",
+  "task1_llm/naveen/task1_training_history.csv": "8a2160aff05f065d5477fcb31c30708397676922a7d9536cb9e1ee5a54f3ebad",
+  "task1_llm/naveen/outputs/generated_samples.csv": "e790cdbcfb4d2557d488e4c94869dd69459e57c3ba32fea74a1a422153f250d9",
+  "task1_llm/naveen/src/Task1_LLM_Naveen.ipynb": "926a2b63c11dcdc97614aad33f5d43983cd184c8cbe882b934ed448f8a50306d"
+}

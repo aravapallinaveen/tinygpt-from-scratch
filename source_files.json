@@ -1,0 +1,56 @@
+{
+  "upstream": "https://github.com/aravapallinaveen/DATA266-Lab1-Pair25",
+  "commit": "f2c44af85977ada3fc36cc70949f266a58726881",
+  "files": [
+    {
+      "path": "task1_llm/naveen/failure_analysis.md",
+      "blob_sha": "41e67879aac5e23b9229089bbf80ef3128839ecf",
+      "size": 1907
+    },
+    {
+      "path": "task1_llm/naveen/metrics_report.csv",
+      "blob_sha": "6ed5fe14d90d77739f45a54f510d0d6cdbe573fe",
+      "size": 968
+    },
+    {
+      "path": "task1_llm/naveen/outputs/generated_samples.csv",
+      "blob_sha": "a068a37ccaf0fedcb6400121a92c822fa2813a72",
+      "size": 5391
+    },
+    {
+      "path": "task1_llm/naveen/results.md",
+      "blob_sha": "c7be4903a87d5ec412e4f84406ab8fc2785dd927",
+      "size": 3334
+    },
+    {
+      "path": "task1_llm/naveen/src/Task1_LLM_Naveen.ipynb",
+      "blob_sha": "7a24ca2035955b320ae5698a7e2a24f66b675bb4",
+      "size": 245627
+    },
+    {
+      "path": "task1_llm/naveen/task1_training_history.csv",
+      "blob_sha": "f94281ca7cae16603ea530210077d82d8ed5cccc",
+      "size": 2543
+    },
+    {
+      "path": "reproducibility/manifests/task1_naveen_manifest.txt",
+      "blob_sha": "1de00447f19a3529620941912ff8302d99f78635",
+      "size": 750
+    },
+    {
+      "path": "reproducibility/raw_logs/task1_llm_naveen_training_raw.txt",
+      "blob_sha": "28c40b7a258d173d269bfea1fec043f6346e7b98",
+      "size": 2047
+    },
+    {
+      "path": "reproducibility/manifests/requirements.txt",
+      "blob_sha": "12c330c285671bf697a65a37e9b6bd1b5be1aeac",
+      "size": 5652
+    },
+    {
+      "path": "reproducibility/manifests/environment.yml",
+      "blob_sha": "c2437a40805fd8bd42f30dd0dafce6e8963d4ab9",
+      "size": 8866
+    }
+  ]
+}
